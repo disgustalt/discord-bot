@@ -1,4 +1,4 @@
-module.exports = {
+export {
   contexts: [0, 1],
   integration_types: [0, 1, 2],
   dm_permission: true,
