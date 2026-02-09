@@ -2,7 +2,7 @@ import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, AttachmentB
 import { createCanvas, loadImage } from '@napi-rs/canvas';
 import * as path from 'path';
 
-module.exports = async (interaction) => {
+export async (interaction) => {
   try {
     const op = interaction.options.getUser('user');
     const user = interaction.user;
