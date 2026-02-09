@@ -1,8 +1,10 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, AttachmentBuilder } from 'discord.js';
 import { createCanvas, loadImage } from '@napi-rs/canvas';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export async function(interaction) {
+export default async function(interaction) {
   try {
     const op = interaction.options.getUser('user');
     const user = interaction.user;
@@ -113,7 +115,7 @@ async function genTurn(user) {
   const avatar = await loadImage(user.displayAvatarURL({ extension: 'png', size: 512 }));
 
   ctx.drawImage(base, 0, 0);
-  const x = base.width * 0.72;
+  const x = base.width * 0.75;
   const y = base.height * 0.45;
   const r = base.width * 0.12;
 
