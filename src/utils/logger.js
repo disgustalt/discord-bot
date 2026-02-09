@@ -14,7 +14,7 @@ function log(type, msg) {
   console.log(`${t.clr}[${t.label}]${r} ${msg}`);
 }
 
-async function Init() {
+function Init() {
   console.log = (...rawr) => log('info', rawr.join(' ');
   console.warn = (...rawr) => log('warn', rawr.join(' ');
   console.error = (...rawr) => log('error', rawr.join(' ');
